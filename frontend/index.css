@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 249 246 244;
+    --foreground: 44 36 23;
+    
+    --card: 255 255 255;
+    --card-foreground: 44 36 23;
+    
+    --popover: 255 255 255;
+    --popover-foreground: 44 36 23;
+    
+    --primary: 212 181 160;
+    --primary-foreground: 44 36 23;
+    
+    --secondary: 232 213 196;
+    --secondary-foreground: 44 36 23;
+    
+    --muted: 237 229 220;
+    --muted-foreground: 139 120 107;
+    
+    --accent: 201 181 168;
+    --accent-foreground: 44 36 23;
+    
+    --destructive: 184 134 125;
+    --destructive-foreground: 44 36 23;
+    
+    --border: 212 196 179;
+    --input: 232 221 211;
+    --ring: 201 181 168;
+  }
+
+  .dark {
+    --background: 26 22 20;
+    --foreground: 249 246 244;
+    
+    --card: 42 37 32;
+    --card-foreground: 249 246 244;
+    
+    --popover: 42 37 32;
+    --popover-foreground: 249 246 244;
+    
+    --primary: 139 111 94;
+    --primary-foreground: 249 246 244;
+    
+    --secondary: 107 87 73;
+    --secondary-foreground: 249 246 244;
+    
+    --muted: 58 51 45;
+    --muted-foreground: 187 172 158;
+    
+    --accent: 90 74 62;
+    --accent-foreground: 249 246 244;
+    
+    --destructive: 166 114 105;
+    --destructive-foreground: 249 246 244;
+    
+    --border: 90 82 72;
+    --input: 74 66 56;
+    --ring: 201 181 168;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
